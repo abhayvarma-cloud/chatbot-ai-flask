@@ -42,7 +42,9 @@ const sendMessage = async (message) => {
   messagesContainer.appendChild(loadingtextElement);
 
   async function makePostRequest(msg) {
-    const url = 'www.example.com';  // Make a POST request to this url
+    const url = 'https://abhayvarma-5000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/chatbot';
+    
+      // Make a POST request to this url
     const requestBody = {
       prompt: msg
     };
@@ -63,6 +65,7 @@ const sendMessage = async (message) => {
     } catch (error) {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
+      alert(error);
       return error
     }
   }
